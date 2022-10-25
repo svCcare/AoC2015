@@ -1,4 +1,7 @@
-﻿namespace Day01_NotQuiteLisp
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Day01-NotQuiteLisp.Tests")]
+namespace Day01_NotQuiteLisp
 {
     internal class ElevatorLogic
     {
@@ -6,7 +9,7 @@
         readonly char _characterUp;
         readonly char _characterDown;
 
-        public ElevatorLogic(string input, char characterUp, char characterDown)
+        internal ElevatorLogic(string input, char characterUp, char characterDown)
         {
             _input = input;
             _characterUp = characterUp;
