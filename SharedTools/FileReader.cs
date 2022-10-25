@@ -1,8 +1,8 @@
-﻿namespace Day01_NotQuiteLisp
+﻿namespace SharedTools
 {
-    internal class FileReader
+    public class FileReader
     {
-        public string Text { get; set; }
+        public string Text { get; private set; }
 
         public FileReader(string path)
         {

@@ -4,8 +4,11 @@
     {
         static void Main(string[] args)
         {
-            var fl = new FileReader("input.txt");
-            var ello = new ElevatorLogic(fl.Text, '(', ')');
+            var fileReader = new SharedTools.FileReader("input.txt");
+            var elevatorLogic = new ElevatorLogic(fileReader.Text, '(', ')');
+
+            Console.WriteLine($"Part 1: {elevatorLogic.SolveOne()}");
+            Console.WriteLine($"Part 2: {elevatorLogic.SolveTwo()}");
         }
 
     }

@@ -11,34 +11,32 @@
             _input = input;
             _characterUp = characterUp;
             _characterDown = characterDown;
-
-            var resultOne = SolveOne();
-            var resultTwo = SolveTwo();
         }
 
-        private int SolveOne()
+        internal int SolveOne()
         {
-            Dictionary<char, int> dictionary = new();
+            Dictionary<char, int> dictionary = new()
+            {
+                { _characterUp, 0 },
+                { _characterDown, 0 },
+            };
+
             foreach (var item in _input)
             {
-                if (!dictionary.ContainsKey(item))
-                {
-                    dictionary.Add(item, 1);
-                }
-
                 dictionary[item]++;
             }
 
             return dictionary[_characterUp] - dictionary[_characterDown];
         }
 
-        private int SolveTwo()
+        internal int SolveTwo()
         {
             var result = 1;
             var currentLevel = 0;
+
             foreach (var item in _input)
             {
-                currentLevel = item == '('
+                currentLevel = item == _characterUp
                     ? currentLevel + 1
                     : currentLevel - 1;
 
