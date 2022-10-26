@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var fileReader = new SharedTools.FileReader("input.txt");
+            var fileReader = new SharedTools.FileReader("input.txt", SharedTools.ReadOption.All);
             var elevatorLogic = new ElevatorLogic(fileReader.Text, '(', ')');
 
             Console.WriteLine($"Part 1: {elevatorLogic.SolveOne()}");
