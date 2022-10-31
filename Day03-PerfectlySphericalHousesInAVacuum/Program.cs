@@ -8,14 +8,13 @@ namespace Day03_PerfectlySphericalHousesInAVacuum
         {
             var fileReader = new FileReader("input.txt", ReadOption.All);
 
-            SantaDelivery santaDelivery = new SantaDelivery(fileReader.Text);
+            var santaDelivery = new SantaDelivery(fileReader.Text);
             santaDelivery.BeginDelivery();
             Console.WriteLine($"Part 1: {santaDelivery.GetAddressCheckListCount()}");
 
-            SantaBotDelivery santaBotDelivery = new SantaBotDelivery(fileReader.Text);
+            var santaBotDelivery = new SantaBotDelivery(fileReader.Text);
             santaBotDelivery.BeginDelivery();
             Console.WriteLine($"Part 2: {santaBotDelivery.GetAddressCheckListCount()}");
-
         }
 
     }

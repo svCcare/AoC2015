@@ -2,21 +2,17 @@
 
 namespace Day03_PerfectlySphericalHousesInAVacuum
 {
-    internal class SantaBotDelivery
+    internal class SantaBotDelivery : DeliveryBase
     {
-        private Dictionary<Point, int> _addressCheckList = new();
+        private Point _santaCurrentLocation = new();
+        private Point _robotCurrentLocation = new();
 
-        private readonly string _directions;
-        private Point _santaCurrentLocation = new Point(0, 0);
-        private Point _robotCurrentLocation = new Point(0, 0);
-
-        internal SantaBotDelivery(string directions)
+        internal SantaBotDelivery(string directions) : base(directions)
         {
-            _directions = directions;
             _addressCheckList.Add(_santaCurrentLocation, 2);
         }
 
-        internal void BeginDelivery()
+        internal override void BeginDelivery()
         {
             for (int i = 0; i < _directions.Length; i++)
             {
@@ -32,43 +28,6 @@ namespace Day03_PerfectlySphericalHousesInAVacuum
                     AddToAddressCheckList(_santaCurrentLocation);
                 }
             }
-        }
-
-        private Point UpdateLocation(char directionChar, Point location)
-        {
-            switch (directionChar)
-            {
-                case '>':
-                    location.X++;
-                    break;
-                case '<':
-                    location.X--;
-                    break;
-                case '^':
-                    location.Y++;
-                    break;
-                case 'v':
-                    location.Y--;
-                    break;
-            }
-
-            return location;
-        }
-
-        internal int GetAddressCheckListCount()
-        {
-            return _addressCheckList.Count;
-        }
-
-        private void AddToAddressCheckList(Point currentLocation)
-        {
-            if (!_addressCheckList.ContainsKey(currentLocation))
-            {
-                _addressCheckList.Add(currentLocation, 1);
-                return;
-            }
-
-            _addressCheckList[currentLocation]++;
         }
     }
 }
