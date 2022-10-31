@@ -2,44 +2,57 @@
 
 namespace Day03_PerfectlySphericalHousesInAVacuum
 {
-    internal class SantaDelivery
+    internal class SantaBotDelivery
     {
         private Dictionary<Point, int> _addressCheckList = new();
-        private readonly string _directions;
-        private Point _currentLocation = new Point(0, 0);
 
-        internal SantaDelivery(string directions)
+        private readonly string _directions;
+        private Point _santaCurrentLocation = new Point(0, 0);
+        private Point _robotCurrentLocation = new Point(0, 0);
+
+        internal SantaBotDelivery(string directions)
         {
             _directions = directions;
-            _addressCheckList.Add(_currentLocation, 1);
+            _addressCheckList.Add(_santaCurrentLocation, 2);
         }
 
         internal void BeginDelivery()
         {
-            foreach (var directionChar in _directions)
+            for (int i = 0; i < _directions.Length; i++)
             {
-                UpdateLocation(directionChar);
-                AddToAddressCheckList(_currentLocation);
+                var moveRobot = i % 2 != 0;
+                if (moveRobot)
+                {
+                    _robotCurrentLocation = UpdateLocation(_directions[i], _robotCurrentLocation);
+                    AddToAddressCheckList(_robotCurrentLocation);
+                }
+                else
+                {
+                    _santaCurrentLocation = UpdateLocation(_directions[i], _santaCurrentLocation);
+                    AddToAddressCheckList(_santaCurrentLocation);
+                }
             }
         }
 
-        private void UpdateLocation(char directionChar)
+        private Point UpdateLocation(char directionChar, Point location)
         {
             switch (directionChar)
             {
                 case '>':
-                    _currentLocation.X++;
+                    location.X++;
                     break;
                 case '<':
-                    _currentLocation.X--;
+                    location.X--;
                     break;
                 case '^':
-                    _currentLocation.Y++;
+                    location.Y++;
                     break;
                 case 'v':
-                    _currentLocation.Y--;
+                    location.Y--;
                     break;
             }
+
+            return location;
         }
 
         internal int GetAddressCheckListCount()

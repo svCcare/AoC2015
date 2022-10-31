@@ -10,8 +10,11 @@ namespace Day03_PerfectlySphericalHousesInAVacuum
 
             SantaDelivery santaDelivery = new SantaDelivery(fileReader.Text);
             santaDelivery.BeginDelivery();
-
             Console.WriteLine($"Part 1: {santaDelivery.GetAddressCheckListCount()}");
+
+            SantaBotDelivery santaBotDelivery = new SantaBotDelivery(fileReader.Text);
+            santaBotDelivery.BeginDelivery();
+            Console.WriteLine($"Part 2: {santaBotDelivery.GetAddressCheckListCount()}");
 
         }
 
