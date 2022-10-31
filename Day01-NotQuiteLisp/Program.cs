@@ -1,10 +1,12 @@
-﻿namespace Day01_NotQuiteLisp
+﻿using SharedTools;
+
+namespace Day01_NotQuiteLisp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var fileReader = new SharedTools.FileReader("input.txt", SharedTools.ReadOption.All);
+            var fileReader = new FileReader("input.txt", ReadOption.All);
             var elevatorLogic = new ElevatorLogic(fileReader.Text, '(', ')');
 
             Console.WriteLine($"Part 1: {elevatorLogic.SolveOne()}");

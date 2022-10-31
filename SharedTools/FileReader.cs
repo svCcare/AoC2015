@@ -2,8 +2,8 @@
 {
     public class FileReader
     {
-        public string Text { get; private set; }
-        public IEnumerable<string> TextLines { get; private set; }
+        public string Text { get; private set; } = "";
+        public string[] TextLines { get; private set; } = new string[0];
 
         public FileReader(string path, ReadOption readOption)
         {
@@ -13,7 +13,7 @@
                     Text = File.ReadAllText(path);
                     break;
                 case ReadOption.Lines:
-                    TextLines = File.ReadLines(path);
+                    TextLines = File.ReadAllLines(path);
                     break;
                 default:
                     Text = File.ReadAllText(path);
