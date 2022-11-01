@@ -7,6 +7,11 @@ namespace Day03_PerfectlySphericalHousesInAVacuum
         protected Dictionary<Point, int> _addressCheckList = new();
         protected readonly string _directions;
 
+        private const char _north = '^';
+        private const char _south = 'v';
+        private const char _east = '>';
+        private const char _west = '<';
+
         internal DeliveryBase(string directions)
         {
             _directions = directions;
@@ -23,16 +28,16 @@ namespace Day03_PerfectlySphericalHousesInAVacuum
         {
             switch (directionChar)
             {
-                case '>':
+                case _east:
                     location.X++;
                     break;
-                case '<':
+                case _west:
                     location.X--;
                     break;
-                case '^':
+                case _north:
                     location.Y++;
                     break;
-                case 'v':
+                case _south:
                     location.Y--;
                     break;
             }
