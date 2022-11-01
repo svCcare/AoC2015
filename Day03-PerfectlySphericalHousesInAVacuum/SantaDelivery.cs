@@ -1,12 +1,14 @@
 ﻿using System.Drawing;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("Day03-PerfectlySphericalHousesInAVacuum.Tests")]
 namespace Day03_PerfectlySphericalHousesInAVacuum
 {
     internal class SantaDelivery : DeliveryBase
     {
         private Point _currentLocation = new();
 
-        public SantaDelivery(string directions) : base(directions)
+        internal SantaDelivery(string directions) : base(directions)
         {
             _addressCheckList.Add(_currentLocation, 1);
         }

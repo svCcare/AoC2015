@@ -1,5 +1,7 @@
 ﻿using System.Drawing;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("Day03_PerfectlySphericalHousesInAVacuum.Tests")]
 namespace Day03_PerfectlySphericalHousesInAVacuum
 {
     internal abstract class DeliveryBase
