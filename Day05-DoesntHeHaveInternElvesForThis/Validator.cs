@@ -20,14 +20,14 @@ namespace Day05_DoesntHeHaveInternElvesForThis
 
             foreach (var line in _input)
             {
-                if (IsNiceLine(line))
+                if (IsNiceLineV2(line))
                 {
                     counter++;
                 }
             }
         }
 
-        internal bool IsNiceLine(string line)
+        internal bool IsNiceLineV1(string line)
         {
             // rule 1 - 3 or more vowels
             var vowelsFound = 0;
@@ -64,6 +64,34 @@ namespace Day05_DoesntHeHaveInternElvesForThis
 
             var result = vowelsFound >= 3 && letterRepeated && !illegalCombo;
             return result;
+        }
+
+        internal bool IsNiceLineV2(string line)
+        {
+            var repearRule = false;
+            var pairRule = false;
+
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (i < line.Length - 1)
+                {
+                    var pair = line.Substring(i, 2);
+                    if (line.IndexOf(pair, i + 2) != -1)
+                    {
+                        pairRule = true;
+                    }
+                }
+
+                if (i < line.Length - 2)
+                {
+                    if (line[i] == line[i + 2])
+                    {
+                        repearRule = true;
+                    }
+                }
+            }
+
+            return repearRule && pairRule;
         }
     }
 }

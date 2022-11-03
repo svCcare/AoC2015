@@ -16,7 +16,28 @@ namespace Day05_DoesntHeHaveInternElvesForThis.Tests
             var validator = new Validator();
 
             // Act
-            var result = validator.IsNiceLine(input);
+            var result = validator.IsNiceLineV1(input);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData("xxyxx", true)]
+        [InlineData("aaa", false)]
+        [InlineData("susu", true)]
+        [InlineData("aaasusu", false)]
+        [InlineData("aasusu", true)]
+        [InlineData("xssx", false)]
+        [InlineData("aaaa", false)]
+        [InlineData("xoxoooxx", false)]
+        public void SolveTwoGivesExpectedOutput(string input, bool expected)
+        {
+            // Arrange
+            var validator = new Validator();
+
+            // Act
+            var result = validator.IsNiceLineV2(input);
 
             // Assert
             Assert.Equal(expected, result);
