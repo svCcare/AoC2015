@@ -3,6 +3,8 @@ Main Language: C#
 
 Reference: https://adventofcode.com/2015
 
+# Week 1
+
 ## Day 1 ⭐⭐
 - Part 1: ~2ms
 - Part 2: ~1ms
@@ -29,6 +31,18 @@ Reference: https://adventofcode.com/2015
 - Unit Tests: ✔
 
 ## Day 6
+- Part 1: ???
+- Part 2: ???
+- Unit Tests: ❌
+
+## Day 7
+- Part 1: ???
+- Part 2: ???
+- Unit Tests: ❌
+
+# Week 2
+
+## Day 8
 - Part 1: ???
 - Part 2: ???
 - Unit Tests: ❌
