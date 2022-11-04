@@ -1,4 +1,7 @@
-﻿namespace Day02_IWasToldThereWouldBeNoMath
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Day02-IWasToldThereWouldBeNoMath.Tests")]
+namespace Day02_IWasToldThereWouldBeNoMath
 {
     internal class Package
     {
