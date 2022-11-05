@@ -6,10 +6,10 @@ Reference: https://adventofcode.com/2015
 # Week 1
 |Day # | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 | Day 7 |
 |------|------------|------------|------------|------------|------------|------------|------------|
-|Stars |⭐⭐       |⭐⭐       |⭐⭐       |⭐⭐       |⭐⭐       |⭐          |            |
+|Stars |⭐⭐       |⭐⭐       |⭐⭐       |⭐⭐       |⭐⭐       |⭐⭐          |            |
 |Part 1|~2ms        |~15ms       |~4ms        |~1.9s       |~2ms        |~0.3s       |~?ms        |
-|Part 2|~1ms        |~16ms       |~5ms        |~1.9s       |~1ms        |~?ms        |~?ms        |
-|Tests |✔           |✔          |✔          |❌          |✔           |❌         |❌          |
+|Part 2|~1ms        |~16ms       |~5ms        |~1.9s       |~1ms        |~0.4s        |~?ms        |
+|Tests |✔           |✔          |✔          |❌          |✔           |✔         |❌          |
 
 ```text
 Day 4.1* - | Iterations: 117946 (~1ms each step)
