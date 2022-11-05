@@ -1,4 +1,7 @@
-﻿namespace Day06_ProbablyAFireHazard
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Day06-ProbablyAFireHazard.Tests")]
+namespace Day06_ProbablyAFireHazard
 {
     internal class HouseDecoration
     {
