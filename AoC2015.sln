@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day05-DoesntHeHaveInternElv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day05-DoesntHeHaveInternElvesForThis.Tests", "Day05-DoesntHeHaveInternElvesForThis.Tests\Day05-DoesntHeHaveInternElvesForThis.Tests.csproj", "{725F1CDA-ECA4-4F93-A6AD-BEEA3D82BA18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day02-IWasToldThereWouldBeNoMath.Tests", "Day02-IWasToldThereWouldBeNoMath.Tests\Day02-IWasToldThereWouldBeNoMath.Tests.csproj", "{37B8A432-603B-4629-A660-C89E4394EAA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day02-IWasToldThereWouldBeNoMath.Tests", "Day02-IWasToldThereWouldBeNoMath.Tests\Day02-IWasToldThereWouldBeNoMath.Tests.csproj", "{37B8A432-603B-4629-A660-C89E4394EAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day06-ProbablyAFireHazard", "Day06-ProbablyAFireHazard\Day06-ProbablyAFireHazard.csproj", "{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{37B8A432-603B-4629-A660-C89E4394EAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37B8A432-603B-4629-A660-C89E4394EAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37B8A432-603B-4629-A660-C89E4394EAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
