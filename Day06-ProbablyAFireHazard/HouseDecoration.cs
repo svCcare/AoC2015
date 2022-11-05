@@ -2,9 +2,14 @@
 {
     internal class HouseDecoration
     {
-        private bool[,] _lamps = new bool[1000, 1000];
+        // for part 1
+        //private bool[,] _lamps = new bool[1000, 1000];
+
+        // for part 2
+        private int[,] _lamps = new int[1000, 1000];
 
         internal int CountLightedUp() => _lamps.Cast<bool>().ToList().Where(x => x == true).Count();
+        internal int CalculateBrightness() => _lamps.Cast<int>().ToList().Sum(x => x);
 
         internal void ExecuteInstructions(IEnumerable<Instruction> operations)
         {
@@ -16,15 +21,22 @@
                     {
                         if (operation.OperationType == OperationType.TurnOn)
                         {
-                            _lamps[x, y] = true;
+                            _lamps[x, y]++;
                         }
                         else if (operation.OperationType == OperationType.TurnOff)
                         {
-                            _lamps[x, y] = false;
+                            if (_lamps[x, y] == 0)
+                            {
+                                _lamps[x, y] = 0;
+                            }
+                            else
+                            {
+                                _lamps[x, y]--;
+                            }
                         }
                         else
                         {
-                            _lamps[x, y] = !_lamps[x, y];
+                            _lamps[x, y] += 2;
                         }
                     }
                 }

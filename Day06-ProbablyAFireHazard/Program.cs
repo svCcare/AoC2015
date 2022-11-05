@@ -1,4 +1,5 @@
 ﻿using SharedTools;
+using System.Diagnostics;
 
 namespace Day06_ProbablyAFireHazard
 {
@@ -15,12 +16,15 @@ namespace Day06_ProbablyAFireHazard
                 operations[index] = InputDecoder.TranslateInput(item);
             }
 
+            var timer = new Stopwatch();
+            timer.Start();
+
             HouseDecoration houseDecoration = new();
             houseDecoration.ExecuteInstructions(operations);
 
 
-            Console.WriteLine($"Part 1: {houseDecoration.CountLightedUp()}");
-            Console.WriteLine($"Part 2:");
+            //Console.WriteLine($"Part 1: {houseDecoration.CountLightedUp()} | elapsed: {timer.ElapsedMilliseconds}ms");
+            Console.WriteLine($"Part 2: {houseDecoration.CalculateBrightness()} | elapsed: {timer.ElapsedMilliseconds}ms");
         }
 
     }
