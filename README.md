@@ -15,6 +15,8 @@ Reference: https://adventofcode.com/2015
 Day 4.1* - | Iterations: 117946 (~1ms each step)
 
 Day 4.2* - | Iterations: 3938038 (~1ms each step)
+
+Day 7.1 - 20ms for decoding input and filling Dictionary
 ```
 # Week 2
 |Day # | Day 8 | Day 9 | Day 10 | Day 11| Day 12 | Day 13 | Day 14 |
