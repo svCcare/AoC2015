@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day05-DoesntHeHaveInternElv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day02-IWasToldThereWouldBeNoMath.Tests", "Day02-IWasToldThereWouldBeNoMath.Tests\Day02-IWasToldThereWouldBeNoMath.Tests.csproj", "{37B8A432-603B-4629-A660-C89E4394EAA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day06-ProbablyAFireHazard", "Day06-ProbablyAFireHazard\Day06-ProbablyAFireHazard.csproj", "{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day06-ProbablyAFireHazard", "Day06-ProbablyAFireHazard\Day06-ProbablyAFireHazard.csproj", "{E4E079ED-85E8-4CFA-B51E-0B502AC8358E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day06-ProbablyAFireHazard.Tests", "Day06-ProbablyAFireHazard.Tests\Day06-ProbablyAFireHazard.Tests.csproj", "{DC6A6FC9-2633-4FC5-8081-2458598479C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day06-ProbablyAFireHazard.Tests", "Day06-ProbablyAFireHazard.Tests\Day06-ProbablyAFireHazard.Tests.csproj", "{DC6A6FC9-2633-4FC5-8081-2458598479C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day07-SomeAssemblyRequired", "Day07-SomeAssemblyRequired\Day07-SomeAssemblyRequired.csproj", "{A3437264-0EC7-4570-9427-A31F78B2DC3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day07-SomeAssemblyRequired", "Day07-SomeAssemblyRequired\Day07-SomeAssemblyRequired.csproj", "{A3437264-0EC7-4570-9427-A31F78B2DC3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day08-Matchsticks", "Day08-Matchsticks\Day08-Matchsticks.csproj", "{B4761F1C-AC43-4F36-9837-265D8A4DCF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{A3437264-0EC7-4570-9427-A31F78B2DC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3437264-0EC7-4570-9427-A31F78B2DC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3437264-0EC7-4570-9427-A31F78B2DC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
