@@ -9,7 +9,7 @@ namespace Day08_Matchsticks
         private readonly string hexChar = "\\x";
         private readonly string hexCharPattern = "@\"\\\\[xX][0-9a-fA-F][0-9a-fA-F]\"";
 
-        internal Dictionary<string, int> Characters { get; set; } = new() { { "result1", 0 }, { "result2", 0 } };
+        internal int[] Results { get; set; } = new int[2];
 
         internal void Calculate(string line)
         {
@@ -19,8 +19,8 @@ namespace Day08_Matchsticks
 
             var logical = CalculateLogicalLength(line);
 
-            Characters["result1"] += physical - logical;
-            Characters["result2"] += encodedPhysical - physical;
+            Results[0] += physical - logical;
+            Results[1] += encodedPhysical - physical;
         }
         internal int CalculatePhysicalLength(string line) // "\xa8br\x8bjr\""
         {

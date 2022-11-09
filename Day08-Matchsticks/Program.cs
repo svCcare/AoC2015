@@ -20,8 +20,8 @@ namespace Day08_Matchsticks
             }
 
             var timeElapsed = timer.ElapsedMilliseconds;
-            Console.WriteLine($"Part 1: {charactersCalculator.Characters["result1"]}"); // ~10ms
-            Console.WriteLine($"Part 2: {charactersCalculator.Characters["result2"]}"); // ~30ms
+            Console.WriteLine($"Part 1: {charactersCalculator.Results[0]}"); // ~10ms
+            Console.WriteLine($"Part 2: {charactersCalculator.Results[1]}"); // ~30ms
             Console.WriteLine($"Overall time elapsed: {timeElapsed}ms"); // ~20ms
         }
     }
