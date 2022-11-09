@@ -4,12 +4,12 @@ namespace Day08_Matchsticks
 {
     internal class CharactersCalculator
     {
-        char escapeChar = '\\';
-        string hexChar = "\\x";
+        private readonly char escapeChar = '\\';
+        private readonly char quote = '"';
+        private readonly string hexChar = "\\x";
+        private readonly string hexCharPattern = "@\"\\\\[xX][0-9a-fA-F][0-9a-fA-F]\"";
 
-        char quote = '"';
-
-        public List<(int physicalCount, int logicalCount, int encodedPhysical)> Characters { get; set; } = new();
+        internal Dictionary<string, int> Characters { get; set; } = new() { { "result1", 0 }, { "result2", 0 } };
 
         internal void Calculate(string line)
         {
@@ -17,9 +17,10 @@ namespace Day08_Matchsticks
 
             var encodedPhysical = CalculatePhysicalLength(line);
 
-            var logical = 0; // CalculateLogicalLength(line);
+            var logical = CalculateLogicalLength(line);
 
-            Characters.Add((physical, logical, encodedPhysical));
+            Characters["result1"] += physical - logical;
+            Characters["result2"] += encodedPhysical - physical;
         }
         internal int CalculatePhysicalLength(string line) // "\xa8br\x8bjr\""
         {
@@ -37,7 +38,7 @@ namespace Day08_Matchsticks
                     {
                         lineLenght += 2;
                     }
-                    else if (!Regex.IsMatch(line.Substring(i, 4), @"\\[xX][0-9a-fA-F][0-9a-fA-F]"))
+                    else if (!Regex.IsMatch(line.Substring(i, 4), hexCharPattern))
                     {
                         lineLenght += 2;
                     }
@@ -85,15 +86,6 @@ namespace Day08_Matchsticks
                     lineLenght++;
                 }
             }
-
-            // \xa8br\x8bjr\"
-            // \xa8 = 1 logical
-            // b
-            // r
-            // \x8b = 1 logical
-            // j
-            // r
-            // \" = 1 logical
 
             return lineLenght;
         }

@@ -12,18 +12,17 @@ namespace Day08_Matchsticks
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
-            CharactersCalculator charactersCalculator = new CharactersCalculator();
+            CharactersCalculator charactersCalculator = new();
 
             foreach (var line in fileReader.TextLines)
             {
                 charactersCalculator.Calculate(line);
             }
 
-            //var result = charactersCalculator.Characters.Select(x => x.physicalCount - x.logicalCount).Sum();
-            var result2 = charactersCalculator.Characters.Select(x => x.encodedPhysical - x.physicalCount).Sum();
-
-            //Console.WriteLine($"Part 1: {result} | elapsed time: {timer.ElapsedMilliseconds}ms"); // ~10ms
-            Console.WriteLine($"Part 2: {result2} | elapsed time: {timer.ElapsedMilliseconds}ms"); // ~30ms
+            var timeElapsed = timer.ElapsedMilliseconds;
+            Console.WriteLine($"Part 1: {charactersCalculator.Characters["result1"]}"); // ~10ms
+            Console.WriteLine($"Part 2: {charactersCalculator.Characters["result2"]}"); // ~30ms
+            Console.WriteLine($"Overall time elapsed: {timeElapsed}ms"); // ~20ms
         }
     }
 }
