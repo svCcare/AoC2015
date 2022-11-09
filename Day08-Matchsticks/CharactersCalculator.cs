@@ -1,19 +1,63 @@
-﻿namespace Day08_Matchsticks
+﻿using System.Text.RegularExpressions;
+
+namespace Day08_Matchsticks
 {
     internal class CharactersCalculator
     {
         char escapeChar = '\\';
         string hexChar = "\\x";
 
-        public List<(int physicalCount, int logicalCount)> Characters { get; set; } = new();
+        char quote = '"';
+
+        public List<(int physicalCount, int logicalCount, int encodedPhysical)> Characters { get; set; } = new();
 
         internal void Calculate(string line)
         {
             var physical = line.Length;
 
-            var logical = CalculateLogicalLength(line);
+            var encodedPhysical = CalculatePhysicalLength(line);
 
-            Characters.Add((physical, logical));
+            var logical = 0; // CalculateLogicalLength(line);
+
+            Characters.Add((physical, logical, encodedPhysical));
+        }
+        internal int CalculatePhysicalLength(string line) // "\xa8br\x8bjr\""
+        {
+            int lineLenght = 2; // always ""
+
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (line[i] == quote)
+                {
+                    lineLenght += 2;
+                }
+                else if (line[i].ToString() + line[i + 1] == hexChar)
+                {
+                    if (i + 4 > line.Length) // might be \x at the very end
+                    {
+                        lineLenght += 2;
+                    }
+                    else if (!Regex.IsMatch(line.Substring(i, 4), @"\\[xX][0-9a-fA-F][0-9a-fA-F]"))
+                    {
+                        lineLenght += 2;
+                    }
+                    else // proper \x00 format
+                    {
+                        i += 3;
+                        lineLenght += 5;
+                    }
+                }
+                else if (line[i] == escapeChar)
+                {
+                    lineLenght += 2;
+                }
+                else
+                {
+                    lineLenght++;
+                }
+            }
+
+            return lineLenght;
         }
 
         internal int CalculateLogicalLength(string line) // "\xa8br\x8bjr\""
