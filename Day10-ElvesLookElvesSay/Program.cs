@@ -9,52 +9,43 @@ namespace Day10_ElvesLookElvesSay
         static void Main(string[] args)
         {
             StringBuilder sbTemp = new();
-            //StringBuilder sb = new();
             Stopwatch timer = new();
             timer.Start();
 
             var text = new FileReader("input.txt", ReadOption.All).Text;
 
-            for (int i = 0; i < 50; i++) // iterate 40 times
+            for (int i = 0; i < 50; i++)
             {
                 text = Step(text, sbTemp);
                 sbTemp.Clear();
-
-                //sb.Append(Step(sb.ToString(), sbTemp));
-                //sbTemp.Clear();
-                //sb.Clear();
             }
 
             Console.WriteLine($"Part 2: {text.Length}, time elapsed: {timer.ElapsedMilliseconds}ms");
         }
 
-
         private static string Step(string currentText, StringBuilder builder)
         {
-            List<string> phrases = new();
+            var repetitions = 0;
+            var textLenght = currentText.Length;
 
-            var currentDigit = currentText[0];
-            var digitCounter = 0;
-
-            for (int i = 0; i < currentText.Length; i++)
+            for (int i = 0; i < textLenght; i++)
             {
-                digitCounter++;
-                currentDigit = currentText[i];
+                repetitions++;
+                var currentDigit = currentText[i];
 
-                if (i + 1 == currentText.Length || currentText[i + 1] != currentDigit)
+                if (FinishSubgroup(i, textLenght, currentText))
                 {
-                    phrases.Add(digitCounter.ToString() + currentDigit);
-                    digitCounter = 0;
+                    builder.Append(repetitions.ToString() + currentDigit);
+                    repetitions = 0;
                 }
-            }
-
-            foreach (var phrase in phrases)
-            {
-                builder.Append(phrase);
             }
 
             return builder.ToString();
         }
 
+        private static bool FinishSubgroup(int i, int textLenght, string text)
+        {
+            return i + 1 == textLenght || text[i] != text[i + 1];
+        }
     }
 }
