@@ -19,11 +19,11 @@ Day 4.2* - | Iterations: 3938038 (~1ms each step)
 Day 7.1 - 20ms for decoding input and filling Dictionary
 ```
 # Week 2
-|Day # | Day 8 | Day 9 | Day 10 | Day 11| Day 12 | Day 13 | Day 14 |
+|Day # | Day 8      | Day 9      | Day 10      | Day 11     | Day 12      | Day 13      | Day 14 |
 |------|------------|------------|-------------|------------|-------------|-------------|-------------|
-|Stars |⭐⭐       |⭐⭐       |             |            |             |             |             |
-|Part 1|~10ms      |~30ms        |~?ms         |~?ms        |~?ms         |~?ms         |~?ms         |
-|Part 2|~10ms      |~30ms        |~?ms         |~?0ms       |~?ms         |~?ms         |~?ms         |
+|Stars |⭐⭐       |⭐⭐       | ⭐⭐         |            |             |             |             |
+|Part 1|~10ms       |~30ms       |~70ms         |~?ms        |~?ms         |~?ms         |~?ms         |
+|Part 2|~10ms       |~30ms       |~800ms         |~?0ms       |~?ms         |~?ms         |~?ms         |
 |Tests |❌         |❌          |❌          |❌          |❌           |❌          |❌          |
 
 # Week 3
