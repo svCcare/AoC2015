@@ -22,13 +22,12 @@ namespace Day09_AllInASingleNight
         {
             var lines = new FileReader("input.txt", ReadOption.Lines).TextLines;
             var decodedLines = InputDecoder.Decode(lines);
-
             foreach (var words in decodedLines)
             {
                 FillDistanceMatrix(words);
             }
 
-            var permutations = GetPermutations(Enumerable.Range(0, 2).ToArray(), 2);
+            var permutations = GetPermutations(Enumerable.Range(0, 8).ToArray(), 8);
             var distances = permutations.Select(permutation => GetDistanceTravelled(permutation)).ToArray();
 
             Console.WriteLine($"Part 1: {distances.Min()}");
