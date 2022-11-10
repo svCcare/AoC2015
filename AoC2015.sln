@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day07-SomeAssemblyRequired"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day08-Matchsticks", "Day08-Matchsticks\Day08-Matchsticks.csproj", "{B4761F1C-AC43-4F36-9837-265D8A4DCF20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day09-AllInASingleNight", "Day09-AllInASingleNight\Day09-AllInASingleNight.csproj", "{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day09-AllInASingleNight", "Day09-AllInASingleNight\Day09-AllInASingleNight.csproj", "{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10-ElvesLookElvesSay", "Day10-ElvesLookElvesSay\Day10-ElvesLookElvesSay.csproj", "{F742C6AE-0DFC-418F-9E1A-D8E1053A1419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F742C6AE-0DFC-418F-9E1A-D8E1053A1419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F742C6AE-0DFC-418F-9E1A-D8E1053A1419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F742C6AE-0DFC-418F-9E1A-D8E1053A1419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F742C6AE-0DFC-418F-9E1A-D8E1053A1419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
