@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day06-ProbablyAFireHazard.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day07-SomeAssemblyRequired", "Day07-SomeAssemblyRequired\Day07-SomeAssemblyRequired.csproj", "{A3437264-0EC7-4570-9427-A31F78B2DC3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day08-Matchsticks", "Day08-Matchsticks\Day08-Matchsticks.csproj", "{B4761F1C-AC43-4F36-9837-265D8A4DCF20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day08-Matchsticks", "Day08-Matchsticks\Day08-Matchsticks.csproj", "{B4761F1C-AC43-4F36-9837-265D8A4DCF20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day09-AllInASingleNight", "Day09-AllInASingleNight\Day09-AllInASingleNight.csproj", "{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4761F1C-AC43-4F36-9837-265D8A4DCF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CEB0F9-8F29-44E9-9FF6-21D40E0BE965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
