@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day10-ElvesLookElvesSay", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11-CorporatePolicy", "Day11-CorporatePolicy\Day11-CorporatePolicy.csproj", "{3080F4DE-38FD-49E3-B793-E77944F6AAD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12-JSAbacusFramework.io", "Day12-JSAbacusFramework.io\Day12-JSAbacusFramework.io.csproj", "{194E6469-3A5B-41B2-A4D9-F9F51568AE64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{3080F4DE-38FD-49E3-B793-E77944F6AAD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3080F4DE-38FD-49E3-B793-E77944F6AAD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3080F4DE-38FD-49E3-B793-E77944F6AAD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194E6469-3A5B-41B2-A4D9-F9F51568AE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194E6469-3A5B-41B2-A4D9-F9F51568AE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194E6469-3A5B-41B2-A4D9-F9F51568AE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194E6469-3A5B-41B2-A4D9-F9F51568AE64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
