@@ -21,9 +21,9 @@ Day 7.1 - 20ms for decoding input and filling Dictionary
 # Week 2
 |Day # | Day 8      | Day 9      | Day 10      | Day 11     | Day 12      | Day 13      | Day 14 |
 |------|------------|------------|-------------|------------|-------------|-------------|-------------|
-|Stars |⭐⭐       |⭐⭐       | ⭐⭐       |⭐⭐       |⭐⭐        |             |             |
-|Part 1|~10ms       |~30ms       |~70ms        |~0.1s       |~1ms         |~?ms         |~?ms         |
-|Part 2|~10ms       |~30ms       |~800ms       |~0.3s       |~1ms         |~?ms         |~?ms         |
+|Stars |⭐⭐       |⭐⭐       | ⭐⭐       |⭐⭐       |⭐⭐        |⭐⭐         |             |
+|Part 1|~10ms       |~30ms       |~70ms        |~0.1s       |~1ms         |~50ms         |~?ms         |
+|Part 2|~10ms       |~30ms       |~800ms       |~0.3s       |~1ms         |~400ms         |~?ms         |
 |Tests |❌         |❌          |❌          |❌          |❌           |❌          |❌          |
 
 # Week 3
